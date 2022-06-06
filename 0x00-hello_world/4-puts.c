@@ -1,12 +1,12 @@
 #include <stdio.h>
-/*this cfile demonstrates 
- * the use of puts
+/*this cfile demonstrates
+ *the use of puts
  */
 
 int main (void)
 {
 	char mystr[] = "\"Programming is like building a multilingual puzzle";
-	puts(mystr); 
+	puts(mystr);
 
 	return (0);
 }

@@ -4,11 +4,11 @@
  * Return (0) success
  */
 
-int _islower(int)
+int _islower(int c)
 {
-	int a;
+	int c;
 
-	for (a = 97; a < 123; a++)
+	for (c = 97; c < 123; c++)
 	{
 		return (1);
 	}

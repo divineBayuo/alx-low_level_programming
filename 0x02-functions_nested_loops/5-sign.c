@@ -2,19 +2,19 @@
 /**
  * print_sign - print_sign prints the sign of a number
  *
- * @c: takes type integer(int c)
+ * @n: takes type integer(int n)
  *
  * Return: (0) success
  */
 
-int print_sign(int c)
+int print_sign(int n)
 {
-	if (c > 0)
+	if (n > 0)
 	{
 		return (1);
 		_putchar('+');
 	}
-	else if (c == 0)
+	else if (n == 0)
 	{
 		return (0);
 		_putchar('0');

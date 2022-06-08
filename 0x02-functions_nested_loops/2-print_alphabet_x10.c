@@ -1,22 +1,19 @@
 #include "main.h"
 /**
- * main - print alphabets with putchar
- * Return (0) success
+ * print_alphabet_x10 - function print_alphabets_x10
+ * Return (void) success
  */
-int main(void)
+void print_alphabet_x10(void)
 {
-	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
 	int i, a;
 
-	for (i = 0; i < 27; i++)
+	for (i = 97; i < 123; i++)
 	{
 		for (a = 0; a < 10; a++)
 		{
-			_putchar(alphabet[i]);
+			_putchar(i);
 		}
 		_putchar('\n');
 	}
 	_putchar('\n');
-
-	return (0);
 }

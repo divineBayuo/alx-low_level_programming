@@ -1,7 +1,10 @@
 #include "main.h"
 /**
- * _islower - function _islower
- * Return (0) success
+ * _islower - _islower checks for lower case characters
+ *
+ * @c: takes type integer(int c)
+ *
+ * Return: (0) success
  */
 
 int _islower(int c)

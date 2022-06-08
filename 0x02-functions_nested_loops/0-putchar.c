@@ -21,8 +21,8 @@ int main(void)
 	for (i = 0; i < 9; i++)
 	{
 		_putchar(myStr[i]);
-		_putchar('\n');
 	}
+	_putchar('\n');
 
 	return (0);
 }

@@ -6,6 +6,7 @@
 int main(void)
 {
 	char myStr[9];
+	int i;
 
 	myStr[0] = '_';
 	myStr[1] = 'p';
@@ -17,9 +18,7 @@ int main(void)
 	myStr[7] = 'r';
 	myStr[8] = '\0';
 
-	int i;
-
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 9; i++)
 	{
 		_putchar(myStr[i]);
 		_putchar('\n');

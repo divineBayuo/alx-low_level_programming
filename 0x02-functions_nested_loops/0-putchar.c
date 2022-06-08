@@ -5,5 +5,5 @@
 */
 int main(void)
 {
-	return (write(1, "_putchar", 9));
+	return (write(1, "_putchar", 1));
 }

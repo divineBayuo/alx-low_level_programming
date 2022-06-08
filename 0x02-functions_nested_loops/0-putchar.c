@@ -17,6 +17,8 @@ int main(void)
 	myStr[7] = 'r';
 	myStr[8] = '\0';
 
+	int i;
+
 	for (i = 0; i < 10; i++)
 	{
 		_putchar(myStr[i]);

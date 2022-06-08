@@ -5,5 +5,23 @@
 */
 int main(void)
 {
-	return (write(1, "_putchar", 1));
+	char myStr[9];
+
+	myStr[0] = '_';
+	myStr[1] = 'p';
+	myStr[2] = 'u';
+	myStr[3] = 't';
+	myStr[4] = 'c';
+	myStr[5] = 'h';
+	myStr[6] = 'a';
+	myStr[7] = 'r';
+	myStr[8] = '\0';
+
+	for (i = 0; i < 10; i++)
+	{
+		_putchar(myStr[i]);
+		_putchar('\n');
+	}
+
+	return (0);
 }

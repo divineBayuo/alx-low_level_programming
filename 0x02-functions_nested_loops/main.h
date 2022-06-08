@@ -2,4 +2,4 @@
 /*this header files contains
  * the _putchar function declaration
  */
-int _putchar(char c[]);
+int _putchar(char c);

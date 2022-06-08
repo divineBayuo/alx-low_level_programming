@@ -18,7 +18,7 @@ int main(void)
 	myStr[7] = 'r';
 	myStr[8] = '\0';
 
-	for (i = 0; i < 9; i++)
+	for (i = 0; i < 8; i++)
 	{
 		_putchar(myStr[i]);
 	}

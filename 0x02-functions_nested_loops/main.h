@@ -1,4 +1,5 @@
-/*This is the header file main.h
- * contains declarations for putchar */
-
+#include <unistd.h>
+/*this header files contains
+ * the _putchar function declaration
+ */
 int _putchar(char c);

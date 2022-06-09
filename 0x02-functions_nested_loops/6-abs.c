@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _abs(int) - function _abs(int) finds the absolute value of an integer
+ * _abs(int): function _abs(int) returns the absolute value of an integer
  *
  * @n: takes type integer(int n)
  *

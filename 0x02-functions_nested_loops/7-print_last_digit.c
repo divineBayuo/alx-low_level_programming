@@ -13,8 +13,15 @@ int print_last_digit(int num)
 
 	digit = num % 10;
 
-	_putchar(digit);
+	if (digit > 0)
+	{
+		_putchar(1 + 48);
+		return (0);
+	}
+	else
+	{
+		_putchar(-1 + 48);
+		return (0);
+	}
 	_putchar('\n');
-
-	return (0);
 }

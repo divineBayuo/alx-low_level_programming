@@ -9,14 +9,15 @@
 
 void times_table(void)
 {
-	int a, b;
+	int a, b, mul;
 
-	for (a = 48; a <= 57; a++)
+	for (a = 0; a <= 9; a++)
 	{
-		for (b = 48; b <= 60; b++)
+		for (b = 0; b <= 12; b++)
 		{
-			_putchar(a * b);
-			_putchar('\n');
+			mul = a * b;
+			_putchar(mul);
 		}
 	}
+	_putchar('\n');
 }

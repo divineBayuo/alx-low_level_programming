@@ -4,12 +4,12 @@
  *
  * Arguments: takes no arguments
  *
- * Return: (0) success
+ * Return: (void) success
  */
 
 void jack_bauer(void)
 {
-	int a, b, c, d;
+	int d, c, b, a;
 
 	for (d = 48; d <= 50; d++)
 	{

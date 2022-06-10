@@ -21,8 +21,8 @@ void times_table(void)
 			
 			if (mul <= 9)
 			{
-				_putchar(mul + 32);
-				_putchar(48);
+				_putchar(32);
+				_putchar(mul + 48);
 			}
 			else
 			{

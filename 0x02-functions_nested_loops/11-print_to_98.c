@@ -19,7 +19,7 @@ void print_to_98(int n)
 			n--;
 		}
 		printf("98");
-		printf(" ");
+		/*printf(" ");*/
 	}
 
 	else if (n < 98)
@@ -32,12 +32,12 @@ void print_to_98(int n)
 			n++;
 		}
 		printf("98");
-		printf(" ");
+		/*printf(" ");*/
 	}
 
 	else
 	{
-		printf("%d", n);
-		printf(" ");
+		printf("%d", n); vc v
+		/*printf(" ");*/
 	}
 }

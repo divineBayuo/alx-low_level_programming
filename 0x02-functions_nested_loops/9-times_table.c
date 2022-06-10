@@ -1,6 +1,7 @@
 #include "main.h"
-/*9-times_table - prints the 9-times table
- * 
+/**
+ * times_table - function prints the 9-times table
+ *
  * Takes no input arguments
  *
  * Return (void) success
@@ -18,7 +19,7 @@ void times_table(void)
 			mul = a * b;
 			_putchar(44);
 			_putchar(32);
-			
+
 			if (mul <= 9)
 			{
 				_putchar(32);

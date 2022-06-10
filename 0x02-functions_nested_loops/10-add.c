@@ -10,7 +10,7 @@
 
 int add(int, int)
 {
-	int n1, n2, sum;
+	int n1, n2, addints;
 
 	addints = n1 + n2;
 

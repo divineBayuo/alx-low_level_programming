@@ -2,15 +2,13 @@
 /**
  * print_to_98 - the function prints natural numbers from n to 98
  *
- *@n: integer where print starts from
+ *@n: natural number where print starts from
  *
  * Return: (void) success
  */
 
 void print_to_98(int n)
 {
-	int n;
-
 	while (n <= 98)
 	{
 		_putchar(n + 48);

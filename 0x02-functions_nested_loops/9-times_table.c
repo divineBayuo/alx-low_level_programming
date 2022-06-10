@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 /*9-times_table - prints the 9-times table
  * 
  * Takes no input arguments

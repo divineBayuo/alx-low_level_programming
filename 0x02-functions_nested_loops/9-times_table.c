@@ -13,14 +13,14 @@ void times_table(void)
 	{
 		for (b = 0; b <= 9; b++)
 		{
-			int mul = a * b;
+			mul = a * b;
 			/*_putchar(44);
 			_putchar(32);*/
 			
 			if (mul <= 9)
 			{
-				_putchar(mul + 48);
-				_putchar(32);
+				_putchar(mul + 32);
+				_putchar(48);
 			}
 			else
 			{

@@ -37,7 +37,7 @@ void print_to_98(int n)
 
 	else
 	{
-		printf("%d", n); vc v
+		printf("%d", n);
 		/*printf(" ");*/
 	}
 }

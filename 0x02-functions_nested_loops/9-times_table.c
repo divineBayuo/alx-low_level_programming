@@ -32,6 +32,6 @@ void times_table(void)
 				_putchar((mul % 10) + 48);
 			}
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }

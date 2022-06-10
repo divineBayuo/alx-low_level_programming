@@ -20,7 +20,7 @@ void print_to_98(int n)
 		}
 	}
 
-	else if
+	else if (n <= 97)
 	{
 		while (n <= 97)
 		{
@@ -30,6 +30,7 @@ void print_to_98(int n)
 			n++;
 		}
 	}
+
 	else
 	{
 		printf("%d", n);

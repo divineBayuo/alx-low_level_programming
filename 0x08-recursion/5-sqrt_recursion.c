@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * pow_op - function that returns 
+ * pow_op - function that returns
  * the natural sqrt of a number
  *
  * @n: input integer
@@ -17,9 +17,9 @@ int pow_op(int n, int i)
 		if (i % (n / i) == n)
 			return (c);
 		else
-			return (-1); 
+			return (-1);
 	}
-	return (0 + pow_op(n, c + 1);
+	return (0 + pow_op(n, c + 1));
 }
 
 /**

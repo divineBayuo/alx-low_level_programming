@@ -1,5 +1,5 @@
 <<<<<<< HEAD
 This readme is for the alx low level programming repository.
 =======
-This dir is about recursions in C programming.
+This readme is for the alx low level programming repository.
 >>>>>>> 915ef7e (Create files)

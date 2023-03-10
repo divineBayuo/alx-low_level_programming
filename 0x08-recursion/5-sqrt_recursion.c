@@ -14,7 +14,7 @@ int pow_op(int n, int i)
 {
 	if (i % (n / i) == 0)
 	{
-		if (i % (n / i) == n)
+		if (i * (n / i) == n)
 			return (i);
 		else
 			return (-1);

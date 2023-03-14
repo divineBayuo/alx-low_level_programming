@@ -13,25 +13,31 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b;
+	int a, b, len, sum;
+	char *p;
 
-	for (a = 1; a < argc; a++)
+	if (argc < 2)
+		printf("0\n");
+
+	else
 	{
-		if (argc == 1)
-			printf("0\n");
-
-		else if (argv[a] < 48 || argv[a] > 57)
-			printf("Error\n");
-
-		else
+		sum = 0;
+		for (a = 1; a < argc; a++)
 		{
-			b = 1;
+			p = argv[a];
+			len = strlen(p);
 
-			for (a = 0; a < 2; a++)
-			b += atoi(argv[a + 1]);
-
-			printf("%d\n", b);
+			for (b = 0; b < len; b++)
+			{
+				if (isdigit(*(p + b)) == 0)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum += atoi(argv[a]);
 		}
+		printf("%d\n", sum);
 	}
 	return (0);
 }

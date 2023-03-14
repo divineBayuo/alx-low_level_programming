@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main -Entry point
@@ -12,17 +13,22 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 0;
+	int a, b;
 
-	if (argv[1] >= 48 && argv[1] <= 57 && argv[2] >= 48 && argv[2] <= 57)
-	{
-		printf("%d\n", argv[1] * argv[2]);
-		return (0);
-	}
-
-	else
+	if (argc == 1 || argc == 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	else
+	{
+		b = 0;
+
+		for (a = 0; a < 3; a++)
+			b *= atoi(argv[a]);
+
+		printf("%d\n", b);
+	}
+	return (0);
 }

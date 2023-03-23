@@ -7,16 +7,24 @@
  * @array: array to be inputed as parameter
  * @size: size of array
  * @cmp: pointer to the function to be executed
+ *
+ * Return: -1 if no element matches || if size <= 0
+ * else return the index of the first element for which
+ * cmp does not return 0
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	if (array == NULL || cmp == NULL)
-		return;
+	int ind;
 
-	while (size-- > 0)
+	if (array == NULL || cmp == NULL)
+		return (-1);
+
+	for (ind = 0; ind < size; ind++)
 	{
-		cmp(*array);
-		array++;
+		if (cmp(array[ind]) != 0)
+			return (index);
 	}
+
+	return (-1);
 }

@@ -3,7 +3,7 @@
 
 /**
  * File - dog.h
- * Desc: Header file that defines a new type struct called dog.
+ * Desc: Defines a new type struct called dog
  */
 
 /**

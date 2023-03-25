@@ -15,10 +15,10 @@ void print_all(const char * const format, ...);
  */
 void print_char(va_list arg)
 {
-	char let;
+	char letter;
 
-	let = va_arg(arg, int);
-	printf("%c", let);
+	letter = va_arg(arg, int);
+	printf("%c", letter);
 }
 
 /**
@@ -43,7 +43,7 @@ void print_float(va_list arg)
 {
 	float num;
 
-	num = va_arg(arg, int);
+	num = va_arg(arg, double);
 	printf("%f", num);
 }
 

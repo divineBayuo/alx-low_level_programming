@@ -1,19 +1,22 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
-
-/**
- * File: variadic_functions.h
- * Desc: Header file for all functions in the
- *	 variadic functions directory
- */
-
 #include <stdarg.h>
 
 /**
- * struct printer - New struct type defining printer
- * @symbol: Symbol representing data type
- * @print: function pointer to a function that prints
- *	   data type corresponding to symbol
+ * File: variadic_functions.h
+ * Description: Header file containing prototypes for all functions in the
+ *	 variadic functions directory
+ */
+
+/**
+ * struct printer - A new structure defining a printer.
+ * @symbol: A symbol representing data type.
+ * @print: A function pointer to a function that prints
+ *	   data type corresponding to symbol.
+ *
+ * Description: The structure struct printer takes a symbol representing
+ *	a data type and a print function pointer to a function
+ *	that prints data type corresponding to symbol.
  */
 typedef struct printer
 {

@@ -76,7 +76,7 @@ char **strtow(char *str)
 	if (word == 0)
 		return (NULL);
 
-	string = malloc(sizeof(char *) * (words + 1));
+	string = malloc(sizeof(char *) * (word + 1));
 	if (string == NULL)
 		return (NULL);
 
@@ -98,7 +98,7 @@ char **strtow(char *str)
 			return (NULL);
 		}
 		for (l = 0; l < letter; l++)
-			string[w][l] = str[ind];
+			string[w][l] = str[index];
 
 		string[w][l] = '\0';
 	}

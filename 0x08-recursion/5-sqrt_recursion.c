@@ -1,37 +1,24 @@
 #include "main.h"
 
 /**
- * power_operation - returns the natural square root of a number
+ * _sqrt_recursion - returns the natural sqrt of a number
  * @n: input number
- * @c: iterator
- * Return: square root or -1
+ * @low: lower boundary
+ * @high: higher boundary
+ * Return: sqrt or -1
  */
 
-int power_operation(int n, int c)
+int _sqrt_recursion(int n, int low, int high)
 {
-	if (c % (n / c) == 0)
-	{
-		if (c * (n / c) == 0)
-			return (c);
-		else
-			return (-1);
-	}
-	return (0 + power_operation(n, c + 1));
-}
+	if (low > high)
+		return high;
 
-/**
- * _sqrt_recursion - returns the natural square root of a number
- * @n: input number
- * Return: natural sqrt
- */
+	int mid = low + (high - low) / 2;
 
-int _sqrt_recursion(int n)
-{
-	if (n < 0)
-		return (-1);
-	if (n == 0)
-		return (0);
-	if (n == 1)
-		return (1);
-	return (power_operation(n, 2)); 
+	if (mid <= n / mid && (mid + 1) > n / (mid + 1))
+		return mid;
+	else if (mid > n / mid)
+		return _sqrt_recursion(n, low, mid - 1);
+	else
+		return _sqrt_recursion(n, mid + 1, high);
 }

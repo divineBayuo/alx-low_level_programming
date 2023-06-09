@@ -39,7 +39,7 @@ int _strlen_recursion(char *s)
 
 int checker(char *s, int i, int len)
 {
-	if (*(s + 1) != *(s + len - 1))
+	if (*(s + i) != *(s + len - 1))
 		return (0);
 	if (i >= len)
 		return (1);

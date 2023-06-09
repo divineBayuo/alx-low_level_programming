@@ -1,24 +1,32 @@
 #include "main.h"
 
+int a_sqrt_recursion(int n, int i);
+
 /**
  * _sqrt_recursion - returns the natural sqrt of a number
  * @n: input number
- * @low: lower boundary
- * @high: higher boundary
  * Return: sqrt or -1
  */
 
-int _sqrt_recursion(int n, int low, int high)
+int _sqrt_recursion(int n)
 {
-	if (low > high)
-		return high;
+	if (n < 0)
+		return (-1);
+	return (a_sqrt_recursion(n, 0));
+}
 
-	int mid = low + (high - low) / 2;
+/**
+ * a_sqrt_recursion - recursion to find natural sqrt
+ * @n: input number
+ * @i: iterator
+ * Return: sqrt
+ */
 
-	if (mid <= n / mid && (mid + 1) > n / (mid + 1))
-		return mid;
-	else if (mid > n / mid)
-		return _sqrt_recursion(n, low, mid - 1);
-	else
-		return _sqrt_recursion(n, mid + 1, high);
+int a_sqrt_recursion(int n, int i)
+{
+	if (i * i > n)
+		return (-1);
+	if (i * i == n)
+		return (i);
+	return (a_sqrt_recursion(n, i + 1));
 }

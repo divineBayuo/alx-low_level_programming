@@ -12,7 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *new;
-	unsigned int a, b, c, end;
+	unsigned int a, b, c, lim;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -36,8 +36,8 @@ char *str_concat(char *s1, char *s2)
 	for (c = 0; c < a; c++)
 		new[c] = s1[c];
 
-	end = b;
-	for (b = 0; b < end; c++, b++)
+	lim = b;
+	for (b = 0; b < lim; c++, b++)
 		new[c] = s2[b];
 
 	return (new);

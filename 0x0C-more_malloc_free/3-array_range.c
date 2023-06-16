@@ -13,12 +13,13 @@
 int *array_range(int min, int max)
 {
 	char *new;
-	unsigned int a;
+	int a;
 
 	if (min > max)
 		return (NULL);
 
-	new = malloc(sizeof(*new) * (max - min) + 1);
+	new = malloc(sizeof(*new) * ((max - min) + 1));
+
 	if (new == NULL)
 		return (NULL);
 

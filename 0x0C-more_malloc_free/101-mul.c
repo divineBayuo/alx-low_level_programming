@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 	ln1 = num_check(argv, 1), ln2 = num_check(argv, 2);
 	zero_check(argv), lnout = ln1 + ln2, nout = malloc(lnout + 1);
 	if (nout == NULL)
-		print("Error\n"), exit(98);
+		printf("Error\n"), exit(98);
 	nout = array_init(nout, lnout);
 	k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = addl = 0;
 	for (; k >= 0; k--, i--)

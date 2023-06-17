@@ -14,13 +14,13 @@ void zero_check(char *argv[])
 	int i, int isn1 = 1, int isn2 = 1;
 
 	for (i = 0; argv[1][i]; i++)
-		if (argv[1][i] != 0)
+		if (argv[1][i] != '0')
 		{
 			isn1 = 0;
 			break;
 		}
 	for (i = 0; argv[2][i]; i++)
-		if (argv[2][i] != 0)
+		if (argv[2][i] != '0')
 		{
 			isn2 = 0;
 			break;
@@ -59,7 +59,7 @@ char *array_init(char *ptr, int lptr)
  * Return: length of the number
  */
 
-int num_check(*char argv[], int n)
+int num_check(char *argv[], int n)
 {
 	int ln;
 

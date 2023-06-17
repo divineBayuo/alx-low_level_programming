@@ -1,15 +1,15 @@
 #include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
+#include <stdlib.h>
+#include <cytpe.h>
 
 /**
- * _is_zero - determines if any number is zero
- * @argv: argument vector.
- *
- * Return: no return.
+ * zero_check - checks if a number is zero
+ * @argv: array of the arguments
+ * Return: no return
  */
-void _is_zero(char *argv[])
+
+void zero_check(char *argv[])
 {
 	int i, isn1 = 1, isn2 = 1;
 
@@ -19,14 +19,12 @@ void _is_zero(char *argv[])
 			isn1 = 0;
 			break;
 		}
-
 	for (i = 0; argv[2][i]; i++)
 		if (argv[2][i] != '0')
 		{
 			isn2 = 0;
 			break;
 		}
-
 	if (isn1 == 1 || isn2 == 1)
 	{
 		printf("0\n");
@@ -34,32 +32,34 @@ void _is_zero(char *argv[])
 	}
 }
 
-/**
- * _initialize_array - set memery to zero in a new array
- * @ar: char array.
- * @lar: length of the char array.
- *
- * Return: pointer of a char array.
- */
-char *_initialize_array(char *ar, int lar)
-{
-	int i = 0;
 
-	for (i = 0; i < lar; i++)
-		ar[i] = '0';
-	ar[lar] = '\0';
-	return (ar);
+/**
+ * array_init - set memory to 0 in a new array
+ * @ptr: char array
+ * @lptr: length of char array
+ * Return: pointer to array
+ */
+
+char *array_init(char *ptr, int lptr)
+{
+	int a = 0;
+
+	for (a = 0; a < lptr; a++)
+		ptr[a] = '0';
+	ptr[lptr] = '\0';
+	return (ptr);
 }
 
+
 /**
- * _checknum - determines length of the number
- * and checks if number is in base 10.
- * @argv: arguments vector.
- * @n: row of the array.
- *
- * Return: length of the number.
+ * num_check - determines length of number
+ * and if number is base 10
+ * @argv: array of arguments
+ * @n: row of the array
+ * Return: length of the number
  */
-int _checknum(char *argv[], int n)
+
+int num_check(char *argv[], int n)
 {
 	int ln;
 
@@ -69,18 +69,17 @@ int _checknum(char *argv[], int n)
 			printf("Error\n");
 			exit(98);
 		}
-
 	return (ln);
 }
 
+
 /**
- * main - Entry point.
- * program that multiplies two positive numbers.
- * @argc: number of arguments.
- * @argv: arguments vector.
- *
- * Return: 0 - success.
+ * main - multiplies 2 positive numbers
+ * @argc: count of the arguments
+ * @argv: array of the arguments
+ * Return: Always (0) success
  */
+
 int main(int argc, char *argv[])
 {
 	int ln1, ln2, lnout, add, addl, i, j, k, ca;
@@ -88,11 +87,11 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 		printf("Error\n"), exit(98);
-	ln1 = _checknum(argv, 1), ln2 = _checknum(argv, 2);
-	_is_zero(argv), lnout = ln1 + ln2, nout = malloc(lnout + 1);
+	ln1 = num_check(argv, 1), ln2 = num_check(argv, 2);
+	zero_check(argv), lnout = ln1 + ln2, nout = malloc(lnout + 1);
 	if (nout == NULL)
 		printf("Error\n"), exit(98);
-	nout = _initialize_array(nout, lnout);
+	nout = array_init(nout, lnout);
 	k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = addl = 0;
 	for (; k >= 0; k--, i--)
 	{
@@ -105,14 +104,14 @@ int main(int argc, char *argv[])
 					nout[k - 1] = (add / 10) + '0';
 				nout[k] = (add % 10) + '0';
 			}
-			i = ln1 - 1, j--, addl = 0, ca++, k = lnout - (1 + ca);
+			i = ln - 1, j--, addl = 0, ca++, k = lnout - (1 + ca);
 		}
 		if (j < 0)
 		{
 			if (nout[0] != '0')
 				break;
 			lnout--;
-			free(nout), nout = malloc(lnout + 1), nout = _initialize_array(nout, lnout);
+			free(nout), nout = malloc(lnout + 1), nout = array_init(nout, lnout);
 			k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = addl = 0;
 		}
 		if (j >= 0)

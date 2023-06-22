@@ -21,7 +21,7 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 
-	int a;
+	int a = 0;
 
 	while (a < 10)
 	{

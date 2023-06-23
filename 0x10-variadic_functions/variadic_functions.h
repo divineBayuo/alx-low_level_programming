@@ -2,7 +2,7 @@
 #define VARIADIC_FUNCTIONS_H
 
 /**
- * variadic_functions.h - header file for structure printer and prototypes
+ * File: variadic_functions.h - header file for structure printer and prototypes
  * Auth: Divine Bayuo
  * Desc: Header file containing prototypes for all functions
  * used in the 0x0F-variadic_functions directory, 
@@ -28,7 +28,7 @@ struct printer
 };
 
 /**
- *printer - Typedef for struct printer
+ * printer - Typedef for struct printer
  */
 typedef struct printer printer_t;
 

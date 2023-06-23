@@ -2,23 +2,23 @@
 #define VARIADIC_FUNCTIONS_H
 
 /**
- * File: variadic_functions.h - header file for structure printer and prototypes
+ * File: variadic_functions.h
  * Auth: Divine Bayuo
  * Desc: Header file containing prototypes for all functions
- * used in the 0x0F-variadic_functions directory, 
+ * used in the 0x0F-variadic_functions directory
  * and the structure definition of printer
  */
 
 #include <stdarg.h>
 
 /**
- * struct printer - structure called printer
- * @symbol: A symbol representing a data type.
- * @print: A function pointer to a function that prints
- * a data type corresponding to symbol.
+ * struct printer - Structure printer
+ * @symbol: A symbol of a data type
+ * @print: A function pointer to printer function
  *
- * Desc: this structure defines a printer
- * for printing characters
+ * Description: struct printer defines a printer for printing
+ * characters from print_numbers, print_strings and
+ * print_all functions.
  */
 struct printer
 {

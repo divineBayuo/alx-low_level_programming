@@ -1,6 +1,6 @@
-#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
+#include "variadic_functions.h"
 
 /**
  * print_all - function that prints anything
@@ -12,7 +12,7 @@
 
 void print_all(const char * const format, ...)
 {
-	int ind;
+	int index;
 	char *str;
 	char *sep = ", ";
 	va_list args;
@@ -20,9 +20,9 @@ void print_all(const char * const format, ...)
 	ind = 0;
 	va_start(args, format)
 
-	while (format != NULL && *(format + ind) != '\0')
+	while (format != NULL && *(format + index) != '\0')
 	{
-		switch (*(format + ind))
+		switch (*(format + index))
 		{
 			case 'c':
 				printf("%c", va_arg(args, int));
@@ -42,12 +42,12 @@ void print_all(const char * const format, ...)
 				printf("%s", str);
 				break;
 			default:
-				ind++;
+				index++;
 				continue;
 		}
-		if (*(format + ind + 1) != 0)
+		if (*(format + index + 1) != 0)
 			printf("%s", sep);
-		ind++;
+		index++;
 	}
 	printf("\n");
 	va_end(args);

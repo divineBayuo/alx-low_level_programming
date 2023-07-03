@@ -1,5 +1,5 @@
 section .data
-	line db "Hello, Holberton!", 10, 0	;10 - ASCII code for newline, 0 - null
+	line db "Hello, Holberton", 10, 0	;10 - ASCII code for newline, 0 - null
 
 section .text
 	extern printf

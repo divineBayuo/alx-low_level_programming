@@ -1,17 +1,16 @@
 section .data
-	line db "Hello, Holberton", 10, 0	;10 - ASCII code for newline, 0 - null
+	line db 'Hello, Holberton', 10	;10 - ASCII code for newline, 0 - null
+	fmt db '%s', 0
 
 section .text
-	extern printf
+	global main
+	external printf
 
-global _start
-
-_start:
-	sub rsp, 8		;stack align
-	mov edi, line		;string address load
-	xor eax, eax		;clear register
+main:
+	push line
 	call printf		;call printf func
 
-	xor edi, edi		;exit status 0
-	mov eax, 60		;system call num for exit
-	syscall			;call OS
+	add rsp, 8
+
+	mov eax, 0		;system call num for exit
+	ret			;call OS

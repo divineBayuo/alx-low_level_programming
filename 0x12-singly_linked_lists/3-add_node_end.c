@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_node_end - function that adds a new node 
+ * add_node_end - function that adds a new node
  * at the end of a list_t list
  * @head: head of the list
  * @str: string of the new node

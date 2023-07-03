@@ -1,8 +1,8 @@
-section .data
-	str db "Hello, Holberton", 0
-	fmt db "%s", 10, 0
+	SECTION .data
+str:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-section .text
+	SECTION .text
 	extern printf
 	global main
 

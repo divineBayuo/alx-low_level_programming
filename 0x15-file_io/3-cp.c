@@ -54,9 +54,9 @@ int main(int argc, char *argv[])
 		num_chars = read(file_from, buffer, 1024);
 		if (num_chars == -1)
 			file_for_error(-1, 0, argv);
-		num_wr = write(file_to, buffer, 1024);
+		num_wr = write(file_to, buffer, num_chars);
 		if (num_wr == -1)
-			file_for_error(-1, 0, argv);
+			file_for_error(0, -1, argv);
 	}
 
 	close_err = close(file_from);
